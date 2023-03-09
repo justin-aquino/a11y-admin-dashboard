@@ -200,11 +200,22 @@ export const themeSettings = (mode) => {
 
 //context for color mode
 export const ColorModeContext = createContext({
-    toggleColorMode: () => {
-
-    }
+    toggleColorMode: () => {}
 })
 
 export const useMode = () => {
-    
+    const [mode, setMode] = useState("dark")
+
+    const colorMode = useMemo(
+        () => ({
+        toggleColorMode: () => 
+            setMode((prev) => (prev === "light" ? "dark" : "light")),
+        }),
+            []
+)
+    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]) //passing in the mode to our themeSettings function that gives us the color palette.
+
+    return [theme, colorMode]
 }
+
+//source: https://www.youtube.com/watch?v=wYpCWwD1oz0 at 33:40
