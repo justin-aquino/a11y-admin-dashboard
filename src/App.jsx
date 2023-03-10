@@ -1,7 +1,7 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import TopBar from "./scenes/global/TopBar";
-import { Form, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Dashboard from "./scenes/dashboard";
 import Sidebar from "./scenes/global/Sidebar"
 import Team from "./scenes/team";
@@ -12,6 +12,8 @@ import Form from "./scenes/form";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
+import Calendar from "./scenes/calendar";
+import Geography from "./scenes/geography";
 
 function App() {
   const [theme, colorMode] = useMode();
