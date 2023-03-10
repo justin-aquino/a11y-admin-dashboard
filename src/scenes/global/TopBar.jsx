@@ -18,20 +18,20 @@ const TopBar = () => {
     <Box display="flex" backgroundColor={colors.primary[400]} borderRadius="3px">
         {/* <label htmlFor="searchInput">Search: </label> */}
         <InputBase sx={{ml: 2, flex: 1}} placeholder="search" id="searchInput"/>
-        <IconButton aria-label="toggle light / dark mode">
+        <IconButton aria-label="search">
+            <SearchIcon />
+        </IconButton>
+        <IconButton aria-label={`toggle light / dark mode`}>
            <LightModeOutlinedIcon /> 
         </IconButton>
-        <IconButton>
+        <IconButton aria-label="Notifications">
             <NotificationsOutlinedIcon />
         </IconButton>
-        <IconButton>
+        <IconButton aria-label="Settings">
             <SettingsOutlinedIcon />
         </IconButton>
-        <IconButton>
+        <IconButton aria-label="My Profile">
             <PersonOutlinedIcon />
-        </IconButton>
-        <IconButton>
-
         </IconButton>
     </Box>
 </Box>
